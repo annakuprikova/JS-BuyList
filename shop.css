@@ -1,0 +1,351 @@
+:root {
+  --background-color: #dadada;
+
+  --add-product-button-background-color: #2285d0;
+  --add-product-button-text-color: #ffffff;
+  --add-product-button-border-color: #2276b7;
+
+  --increase-button-color: #22ba46;
+  --increase-button-text-color: #ffffff;
+  --decrease-button-color: #db2828;
+  --decrease-button-text-color: #ffffff;
+
+  --remove-button-background-color: #db2828;
+  --remove-button-text-color: #ffffff;
+  --remove-button-border-color: darkred;
+
+  --status-button-background-color: #e3e3e3;
+  --status-button-text-color: black;
+  --status-button-border-color: gray;
+
+  --box-background-color: #ffffff;
+
+  --quantity-background-color: lightgray;
+  --quantity-text-color: black;
+
+  --product-summary-box-background-color: #e3e3e3;
+  --product-summary-box-text-color: black;
+
+  --leftbox-background-color: #ffffff;
+  --leftbox-border-color: #cccccc;
+
+  --product-name-input-color: #cccccc;
+  --product-name-input-border-color: #ccc;
+  --product-border-color: #cccccc;
+
+  --product-summary-box-color: #e8e8e8;
+  --product-quantity-summary-color: #f2711d;
+  --product-quantity-text-summary-color: #ffffff;
+
+  --initial-badge-color: #af00da;
+  --hovered-badge-color: #4c01da;
+  --badge-text-color: #ffffff;
+
+  --tooltip-background-color: #af00da;
+  --tooltip-text-color: #ffffff;
+
+  --badge-print-background-color: #ffffff;
+  --badge-print-text-color: purple;
+  --badge-print-border-color: purple;
+}
+
+body {
+    font-family: Arial;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 100vh;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 10px;
+	flex-wrap: wrap;
+}
+
+.left-box {
+	background-color: var(--box-background-color);
+	padding: 20px;
+	border-radius: 5px;
+	flex: 3;
+	margin: 20px;
+}
+.sidebox {
+	background-color: var(--box-background-color);
+	padding: 20px;
+	border-radius: 5px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.section h3 {
+	margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid var(--leftbox-border-color);
+    padding-bottom: 10px;
+}
+
+.product-summary-box {
+    background-color: var(--product-summary-box-background-color);
+    color: var(--product-summary-box-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 20px;
+    width: 75px;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: smaller;
+}
+
+.product-summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-summary {
+    background-color: var(--product-quantity-summary-color);
+    color: var(--product-quantity-text-summary-color);
+    margin-left: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    margin-bottom: 20px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#product-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--product-name-input-color);
+    flex: 1;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#add-button {
+    background-color: var(--add-product-button-background-color);
+    color: var(--add-product-button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+    border-bottom: 3px solid var(--add-product-button-border-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--product-border-color);
+    padding-bottom: 10px;
+}
+
+.product:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.product-name {
+    flex: 1 1 auto;
+    margin-right: 10px;
+}
+
+#tomatoes {
+    text-decoration: line-through;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+    margin-left: auto;
+}
+
+.decrease {
+    background-color: var(--decrease-button-color);
+    color: var(--decrease-button-text-color);
+}
+
+.increase {
+    background-color: var(--increase-button-color);
+    color: var(--increase-button-text-color);
+}
+
+.quantity-controls .decrease,
+.quantity-controls .increase {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.quantity-controls-for-tomatoes {
+    margin-right: 202px;
+    margin-left: auto;
+}
+
+.quantity {
+    background-color: var(--quantity-background-color);
+    color: var(--quantity-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 20%;
+    font-size: smaller;
+}
+
+.buttons-box {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.status {
+    background-color: var(--status-button-background-color);
+    color: var(--status-button-text-color);
+    border: 0.5px solid var(--status-button-border-color);
+    border-bottom: 2px solid var(--status-button-border-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove {
+    background-color: var(--remove-button-background-color);
+    color: var(--remove-button-text-color);
+    border: 0.5px solid var(--remove-button-border-color);
+    border-bottom: 2px solid var(--remove-button-border-color);
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-name-input {
+    width: 120px;
+    border: 1px solid var(--product-name-input-border-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttons-box {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    background-color: var(--initial-badge-color);
+    color: var(--badge-text-color);
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    margin-left: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.badge:hover {
+    background-color: var(--hovered-badge-color);
+    height: 100px;
+    color: var(--badge-text-color);
+}
+
+/* стиль для надпису з іменем на бейджі */
+.badge span {
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
+
+.badge:hover span {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .left-box,
+    .sidebox {
+        flex: 0 0 140%;
+    }
+}
+
+@media print {
+    .badge {
+        background-color: var(--badge-print-background-color);
+        border: 2px solid var(--badge-print-border-color);
+        color: var(--badge-print-text-color);
+    }
+    .badge span {
+        display: none;
+    }
+    .badge::after {
+        content: "Created by: Купрікова Анна";
+        font-size: 16px;
+        color: var(--badge-print-text-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    background-color: var(--tooltip-background-color);
+    color: var(--tooltip-text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    transform-origin: top;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}

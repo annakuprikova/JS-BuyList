@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ua">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" type="text/css" href="shop.css">
+</head>
+
+<body>
+	<div class="box">
+		<div class="left-box">
+
+			<div class="input-box">
+				<input type="text" placeholder="Назва товару" id="product-input">
+				<button id="add-button" data-tooltip="Додати товар">Додати</button>
+			</div>
+
+			<div class="product">
+				<span class="product-name" id="tomatoes">Помідори</span>
+				<div class="quantity-controls-for-tomatoes">
+					<span class="quantity">2</span>
+				</div>
+				<div class="buttons-box">
+					<button class="status not-bought" data-tooltip="Не куплено">Не куплено</button>
+				</div>
+			</div>
+
+			<div class="product">
+				<span class="product-name">Печиво</span>
+				<div class="quantity-controls">
+					<button class="decrease" data-tooltip="Зменшити кількість">-</button>
+					<span class="quantity">2</span>
+					<button class="increase" data-tooltip="Збільшити кількість">+</button>
+				</div>
+				<div class="buttons-box">
+					<button class="status bought" data-tooltip="Куплено">Куплено</button>
+					<button class="remove" data-tooltip="Видалити товар">x</button>
+				</div>
+			</div>
+
+			<div class="product">
+				<input type="text" class="product-name-input" placeholder="Сир">
+				<div class="quantity-controls">
+					<button class="decrease" data-tooltip="Зменшити кількість">-</button>
+					<span class="quantity">1</span>
+					<button class="increase" data-tooltip="Збільшити кількість">+</button>
+				</div>
+				<div class="buttons-box">
+					<button class="status bought" data-tooltip="Куплено">Куплено</button>
+					<button class="remove" data-tooltip="Видалити товар">x</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="sidebox">
+			<div class="section">
+				<h3>Залишилося</h3>
+				<div style="display: flex; gap: 10px;">
+					<div class="product-summary-box">
+						<div class="product-summary">Печиво
+							<span class="quantity-summary">2</span>
+						</div>
+					</div>
+					<div class="product-summary-box">
+						<div class="product-summary">Сир
+							<span class="quantity-summary">1</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h3>Куплено</h3>
+				<div class="product-summary-box">
+					<div class="product-summary"><s>Помідори</s>
+						<span class="quantity-summary">2</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="badge">
+		Buy List
+		<span>Created by: Купрікова Анна</span>
+	</div>
+</body>
+
+</html>
