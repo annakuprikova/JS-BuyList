@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" href="buylist.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="panel left-panel">
+        <div class="input-row">
+            <input type="text" id="productInput" placeholder="Назва товару">
+            <button class="add-btn" id="add-btn" data-tooltip="Додати новий товар до списку">Додати</button>
+        </div>
+
+        <!-- Before adding JavaScript file: -->
+        <!-- <div class="product">
+            <div class="product-row">
+                <div class="product-name line-through">Помідори</div>
+                <div class="controls-container">
+                    <div class="qty-only">2</div>
+                </div>
+                <div class="buy-box">
+                    <button class="buy-btn not-bought" data-tooltip="Позначити як не куплено">Не куплено</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-row">
+                <div class="product-name">Печиво</div>
+                <div class="controls-container">
+                    <div class="controls">
+                        <button class="circle-btn decrease" data-tooltip="Зменшити кількість">−</button>
+                        <div class="qty">2</div>
+                        <button class="circle-btn increase" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                </div>
+                <div class="buy-box">
+                    <button class="buy-btn" data-tooltip="Позначити як куплено">Куплено</button>
+                    <button class="delete-btn" data-tooltip="Видалити товар зі списку">×</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product highlighted">
+            <div class="product-row">
+                <div class="product-name"><input class="editable-name" type="text" value="Сир"></div>
+                <div class="controls-container">
+                    <div class="controls">
+                        <button class="circle-btn decrease" data-tooltip="Зменшити кількість">−</button>
+                        <div class="qty">1</div>
+                        <button class="circle-btn increase" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                </div>
+                <div class="buy-box">
+                    <button class="buy-btn" data-tooltip="Позначити як куплено">Куплено</button>
+                    <button class="delete-btn" data-tooltip="Видалити товар зі списку">×</button>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="productsList"></div>
+    </div>
+
+    <div class="panel right-panel">
+        <div class="section">
+            <h3>Залишилося</h3>
+            <hr class="divider">
+            <div class="product-summary-box" id="remainingProducts"></div>
+            <!-- <div class="product-summary-box">
+                <div class="product-summary">
+                    Печиво
+                    <div class="product-summary-qty">2</div>
+                </div>
+                <div class="product-summary">
+                    Сир
+                    <div class="product-summary-qty">1</div>
+                </div>
+            </div> -->
+        </div>
+        <hr class="divider">
+        <div class="section">
+            <h3>Куплено</h3>
+            <hr class="divider">
+            <div class="product-summary-box" id="boughtProducts"></div>
+            <!-- <div class="product-summary-box">
+                <div class="product-summary bought">
+                    <span class="line-through">Помідори</span>
+                    <div class="product-summary-qty">2</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+	<div class="badge">
+		Buy List
+		<span>Created by: Купрікова Анна</span>
+	</div>
+
+<script src="buylist.js"></script>
+
+</body>
+</html>
